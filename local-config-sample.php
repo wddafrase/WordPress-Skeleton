@@ -1,12 +1,19 @@
 <?php
-/*
-This is a sample local-config.php file
-In it, you *must* include the four main database defines
+/**
+ * This is a sample local-config.php file
+ * In it, you *must* include the four main database defines
+ *
+ * You may include other settings here that you only want enabled on your local development checkouts
+ */
 
-You may include other settings here that you only want enabled on your local development checkouts
-*/
+/** The name of the database for WordPress */
+define('DB_NAME', '');
 
-define( 'DB_NAME', 'local_db_name' );
-define( 'DB_USER', 'local_db_user' );
-define( 'DB_PASSWORD', 'local_db_password' );
-define( 'DB_HOST', 'localhost' ); // Probably 'localhost'
+/** MySQL database username */
+define('DB_USER', '');
+
+/** MySQL database password */
+define('DB_PASSWORD', '');
+
+/** MySQL hostname */
+define('DB_HOST', '');
