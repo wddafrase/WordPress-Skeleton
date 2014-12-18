@@ -20,17 +20,11 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 } else {
     define( 'WP_LOCAL_DEV', false );
 
-    /** The name of the database for WordPress */
-    define( 'DB_NAME', '' );
-    
-    /** MySQL database username */
-    define( 'DB_USER', '' );
-    
-    /** MySQL database password */
-    define( 'DB_PASSWORD', '' );
-    
-    /** MySQL hostname */
-    define( 'DB_HOST', '' );
+    /**
+     * The production-config.php file should be created automatically 
+     * when pushed to production.
+     */
+    include( dirname( __FILE__ ) . '/production-config.php' );
 }
 
 /** Database Charset to use in creating database tables. */
@@ -75,11 +69,11 @@ $table_prefix  = 'wp_';
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define( 'WP_DEBUG', false );
 
 /* That's all, stop editing! Happy blogging. */
 
-/* Custom content directory */
+/** Custom content directory */
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
 define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
 
