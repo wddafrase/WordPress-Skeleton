@@ -6,6 +6,7 @@
 ### WordPress ###
 *.log
 .htaccess
+wp-config.php
 sitemap.xml
 sitemap.xml.gz
 content/advanced-cache.php
