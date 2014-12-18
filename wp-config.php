@@ -79,10 +79,9 @@ define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 
-
 /* Custom content directory */
-// define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
-// define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
+define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
+define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
