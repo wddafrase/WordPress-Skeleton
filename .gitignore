@@ -3,6 +3,11 @@
 /sql-dump-*.sql
 /db-sync
 
+# don't commit wordpress files
+/wp/*
+# keep one file so folder exists in repo
+!/wp/.gitkeep
+
 ### WordPress ###
 *.log
 .htaccess
