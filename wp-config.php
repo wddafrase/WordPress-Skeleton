@@ -15,16 +15,11 @@
  */
 
 if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
-    define( 'WP_LOCAL_DEV', true );
     include( dirname( __FILE__ ) . '/local-config.php' );
-} else {
-    define( 'WP_LOCAL_DEV', false );
-
-    /**
-     * The production-config.php file should be created automatically 
-     * when pushed to production.
-     */
+} elseif ( file_exists( dirname( __FILE__ ) . '/production-config.php' ) ) {
     include( dirname( __FILE__ ) . '/production-config.php' );
+} else {
+    die('No config file found');
 }
 
 /** Database Charset to use in creating database tables. */
